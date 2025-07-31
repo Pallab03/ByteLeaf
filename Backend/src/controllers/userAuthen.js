@@ -114,7 +114,9 @@ const verifyEmail = async (req, res) => {
         res.cookie('token', token, {
             httpOnly: true,
             path: '/',
-            maxAge: 24 * 60 * 60 * 1000
+            maxAge: 24 * 60 * 60 * 1000,
+            secure: true,           
+            sameSite: 'None'        
         });
         res.clearCookie('verifyEmail', { path: '/user/verify-email' }); //clear the old cookie
         const reply = {
@@ -175,7 +177,9 @@ const login = async (req, res) => {
         res.cookie('token', token, {
             httpOnly: true,
             path: '/',
-            maxAge: 24 * 60 * 60 * 1000 //max age 1 day
+            maxAge: 24 * 60 * 60 * 1000, //max age 1 day
+            secure: true,           
+            sameSite: 'None'  
         });
 
         res.status(201).json({
