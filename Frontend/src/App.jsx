@@ -1,5 +1,5 @@
 import { Routes, Route ,Navigate} from "react-router";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/Homepage";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import { checkAuth } from "./autnSlice";
@@ -29,12 +29,7 @@ function App(){
     dispatch(checkAuth())
   },[dispatch])
 
-  //for loading effect
-  //  if (loading) {
-  //   return <div className="min-h-screen flex items-center justify-center">
-  //     <span className="loading loading-spinner loading-lg"></span>
-  //   </div>;
-  // }
+
 
 
   return(
