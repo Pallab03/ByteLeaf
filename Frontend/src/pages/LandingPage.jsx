@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { ArrowRight, Github, Link, Linkedin, Mail} from 'lucide-react';
-import Particles from '../RareBits/Particles';
+import { Github, Linkedin, Mail} from 'lucide-react';
+
 import { NavLink } from 'react-router';
 import TextType from '../RareBits/TextType';
 import ScrollVelocity from '../RareBits/ScrollVelocity';
@@ -15,121 +15,7 @@ const LandingPage = () => {
   });
   return (
 
-    // <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white font-sans">
-    //   {/* Navbar */}
-    //   <header className="bg-black/30 backdrop-blur sticky top-0 z-50 shadow-lg">
-    //     <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-    //       <h1 className="text-3xl font-bold text-emerald-400">ByteLeaf</h1>
 
-    //       {/* Mobile Toggle */}
-    //       <button
-    //         className="md:hidden text-white"
-    //         onClick={() => setIsOpen(!isOpen)}
-    //         aria-label="Toggle Menu"
-    //       >
-    //         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-    //       </button>
-
-    //       {/* Nav Links */}
-    //       <nav className="space-x-6 hidden md:flex">
-    //         <a href="#features" className="hover:text-emerald-400 transition">Features</a>
-    //         <a href="#about" className="hover:text-emerald-400 transition">About</a>
-    //         <a href="#contact" className="hover:text-emerald-400 transition">Contact</a>
-    //       </nav>
-
-    //       <button className="hidden md:block bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-md shadow transition">
-    //         Join Now
-    //       </button>
-    //     </div>
-
-    //     {/* Mobile Nav */}
-    //     {isOpen && (
-    //       <div className="md:hidden bg-black text-white px-6 pb-4 space-y-2">
-    //         <a href="#features" className="block hover:text-emerald-400">Features</a>
-    //         <a href="#about" className="block hover:text-emerald-400">About</a>
-    //         <a href="#contact" className="block hover:text-emerald-400">Contact</a>
-    //         <button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-md shadow transition">
-    //           Join Now
-    //         </button>
-    //       </div>
-    //     )}
-    //   </header>
-      
-
-    //   {/* Hero Section */}
-    //   <section className="py-24 px-6 text-center">
-        
-    //     <motion.h2
-    //       className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500 mb-6"
-    //       initial={{ opacity: 0, y: -50 }}
-    //       animate={{ opacity: 1, y: 0 }}
-    //       transition={{ duration: 0.8 }}
-    //     >
-    //       Level Up Your Coding
-    //     </motion.h2>
-    //     <motion.p
-    //       className="text-lg md:text-2xl text-gray-300 max-w-2xl mx-auto mb-10"
-    //       initial={{ opacity: 0 }}
-    //       animate={{ opacity: 1 }}
-    //       transition={{ delay: 0.4 }}
-    //     >
-    //       Practice DSA, build skills, and crack interviews like a pro – all in one platform.
-    //     </motion.p>
-    //     <motion.button
-    //       className="bg-emerald-500 hover:bg-emerald-600 px-6 py-3 rounded-md font-semibold flex items-center justify-center mx-auto text-white"
-    //       whileHover={{ scale: 1.05 }}
-    //     >
-    //       Start Practicing <ArrowRight className="ml-2 w-5 h-5" />
-    //     </motion.button>
-    //   </section>
-    //   <div className="m-2 p-2 divider"></div>
-
-    //   {/* Features Section */}
-    //   <section id="features" className="py-20 px-6 ">
-    //     <h3 className="text-4xl font-bold text-center mb-16 text-white">What You Get</h3>
-    //     <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-    //       {[{
-    //         title: 'Real-Time Judge',
-    //         icon: '🧠',
-    //         desc: 'Code and get instant feedback with Judge0 integration.'
-    //       }, {
-    //         title: 'Track Progress',
-    //         icon: '📈',
-    //         desc: 'Monitor your daily practice, streaks, and improvements.'
-    //       }, {
-    //         title: 'Competitive Leaderboard',
-    //         icon: '🏆',
-    //         desc: 'Compete with coders globally and climb the ranks.'
-    //       }].map((feature, index) => (
-    //         <motion.div
-    //           key={index}
-    //           className="bg-gray-800 rounded-xl p-6 text-center border border-gray-700 hover:border-emerald-500 transition"
-    //           whileHover={{ scale: 1.05 }}
-    //         >
-    //           <div className="text-5xl mb-4">{feature.icon}</div>
-    //           <h4 className="text-2xl font-semibold mb-2 text-emerald-400">{feature.title}</h4>
-    //           <p className="text-gray-300">{feature.desc}</p>
-    //         </motion.div>
-    //       ))}
-    //     </div>
-    //   </section>
-
-    //   {/* About Section */}
-    //   <section id="about" className="py-20 px-6 ">
-    //     <div className="max-w-4xl mx-auto text-center">
-    //       <h3 className="text-3xl font-bold text-emerald-400 mb-6">Why CodeCrush?</h3>
-    //       <p className="text-gray-300 text-lg">
-    //         Inspired by platforms like LeetCode, CodeCrush brings you a sleek UI, better UX, and smoother developer experience.
-    //         We aim to help you learn, grow, and get job-ready faster with modern tools and design.
-    //       </p>
-    //     </div>
-    //   </section>
-
-    //   {/* Footer */}
-    //   <footer className="bg-gray-950 py-6 text-center">
-    //     <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} CodeCrush. Built with ❤️ by Devs for Devs.</p>
-    //   </footer>
-    // </div>
       <div className="min-h-screen w-full bg-gradient-to-br from-base-200 via-green-900  bg-lime-700 scroll-smooth" data-theme="green"> 
         <div className='relative flex justify-center w-full bg-gray-800/20  min-h-screen' >
           

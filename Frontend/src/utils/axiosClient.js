@@ -1,7 +1,7 @@
  import axios from "axios"
  
  const axiosClient =  axios.create({
-     baseURL: 'http://localhost:3000',
+     baseURL: 'https://byteleaf-backend.onrender.com',
      withCredentials: true, //attaced cookies
      headers: {
          'Content-Type': 'application/json'
