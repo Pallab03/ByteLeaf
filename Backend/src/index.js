@@ -13,7 +13,7 @@ const videoRouter = require('./routes/videoCreator');
 
 //for cross origin
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://byteleaf-frontend.onrender.com',
     credentials: true
 }))
 
