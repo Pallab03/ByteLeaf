@@ -14,9 +14,16 @@ const aiRotuer = require('./routes/AiChatting');
 const videoRouter = require('./routes/videoCreator');
 
 //for cross origin
+// app.use(cors({
+//     origin: 'https://byteleaf-frontend.onrender.com',
+//     credentials: true,
+// }))
+
 app.use(cors({
     origin: 'https://byteleaf-frontend.onrender.com',
-    credentials: true,
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }))
 
 app.use(express.json())
