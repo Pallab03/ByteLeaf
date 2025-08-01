@@ -115,7 +115,8 @@ const verifyEmail = async (req, res) => {
             httpOnly: true,
             path: '/',
             maxAge: 24 * 60 * 60 * 1000,
-            secure: true,           
+            secure: true,
+            domain: '.onrender.com',
             sameSite: 'None'        
         });
         res.clearCookie('verifyEmail', { path: '/user/verify-email' }); //clear the old cookie
