@@ -1,6 +1,6 @@
 const express = require('express');
 const app= express();
-app.set('trust proxy', 1); // 👈 Add this line
+
 
 require('dotenv').config();
 const main= require('./config/db')
