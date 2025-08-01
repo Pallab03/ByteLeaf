@@ -6,8 +6,12 @@ const redisClient = require('../config/redis');
 const userMiddleware = async (req,res,next)=>{
     try{    
         const {token}=req.cookies;
-        if(!token)
+        if(token)
+            console.log("token present:",token)
+        if(!token){
+            console.log("No token found")
             throw new Error("token Is not present .")
+        }
 
         const payload= jwt.verify(token,process.env.JWT_KEY);
 
