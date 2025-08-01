@@ -16,7 +16,8 @@ const videoRouter = require('./routes/videoCreator');
 //for cross origin
 app.use(cors({
     origin: 'https://byteleaf-frontend.onrender.com',
-    credentials: true
+    credentials: true,
+    exposedHeaders: ['set-cookie']
 }))
 
 app.use(express.json())
