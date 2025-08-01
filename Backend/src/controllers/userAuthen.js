@@ -179,9 +179,6 @@ const login = async (req, res) => {
             httpOnly: true,
             path: '/',
             maxAge: 24 * 60 * 60 * 1000, //max age 1 day
-            secure: true,
-            domain: '.onrender.com',
-            sameSite: 'None'  
         });
 
 
